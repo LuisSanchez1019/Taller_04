@@ -9,34 +9,42 @@
 </head>
 
 <body>
-    <h1>Ejercio 5 guia 4</h1>
+    <h1>Ejercio 6 guia 4</h1>
     <script>
-        var l, suma, suma_1, suma_2, total, venta;
-        l = Number.parseInt(input("INGRESE EL NUMERO DE LAS VENTAS DIARIAS"));
+        var suma, suma1, suma2, suma3, trab, trabj, tservi, tservi_1, tservi_2, tservi_3;
+        trabj = 10;
+        tservi = 100;
+        tservi_1 = 250;
+        tservi_2 = 400;
+        tservi_3 = 550;
         suma = 0;
-        suma_1 = 0;
-        suma_2 = 0;
+        suma1 = 0;
+        suma2 = 0;
+        suma3 = 0;
 
-        for (var d = 0, _pj_a = l; d < _pj_a; d += 1) {
-            venta = Number.parseInt(input("INGRESE EL VALOR DE SU VENTA"));
+        for (var l = 0, _pj_a = trabj; l < _pj_a; l += 1) {
+            trab = Number.parseInt(input("  INGRESE EL TIEMPO DEDICADO A LA EMPRESA"));
 
-            if (venta > 1000) {
-                suma = venta + suma;
+            if (trab >= 1 && trab <= 5) {
+                suma = trab + suma;
             }
 
-            if (venta > 500 && venta <= 1000) {
-                suma_1 = venta + suma_1;
+            if (trab > 5 && trab <= 10) {
+                suma1 = trab + suma1;
             }
 
-            if (venta <= 500) {
-                suma_2 = venta + suma_2;
-            } else {
-                total = suma + suma_1 + suma_2;
-                alert("EL MONTO VENDIDO EN LA CATEGORIA 1 ES DE: $", suma);
-                alert("EL MONTO VENDIDO EN LA CATEGORIA 2 ES DE: $", suma_1);
-                alert("EL MONTO VENDIDO EN LA CATEGORIA 3 ES DE: $", suma_2);
-                alert("EL MONTO VENDIDO DE FORMA GLOBAL ES DE: $", total);
+            if (trab > 10 && trab <= 20) {
+                suma2 = trab + suma2;
             }
+
+            if (trab > 20) {
+                suma3 = trab + suma3;
+            }
+
+            alert("EL TOTAL DE LOS TRABAJADORES QUE LLEVAN ENTRE 1 Y 5 A\u00d1OS ", suma);
+            alert("EL TOTAL DE LOS TRABAJADORES QUE LLEVAN ENTRE 5 Y 10 A\u00d1OS ", suma1);
+            alert("EL TOTAL DE LOS TRABAJADORES QUE LLEVAN ENTRE 10 Y 20 A\u00d1OS ", suma2);
+            alert("EL TOTAL DE LOS TRABAJADORES QUE LLEVAN 20 A\u00d1OS EN LA EMPRESA ES DE", suma3);
         }
     </script>
 </body>
