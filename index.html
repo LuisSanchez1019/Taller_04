@@ -9,18 +9,34 @@
 </head>
 
 <body>
-    <h1>Ejercio 4 guia 4</h1>
+    <h1>Ejercio 5 guia 4</h1>
     <script>
-        var m, suma, total;
-        total = 10;
+        var l, suma, suma_1, suma_2, total, venta;
+        l = Number.parseInt(input("INGRESE EL NUMERO DE LAS VENTAS DIARIAS"));
         suma = 0;
-        m = 20;
+        suma_1 = 0;
+        suma_2 = 0;
 
-        for (var n = 1, _pj_a = 21; n < _pj_a; n += 1) {
-            total = total * 2;
-            alert("EN EL MES ", n, "EL VALOR QUE PAGO FUE ", total);
-            suma = total + m;
-            alert("EL TOTAL DE LOS 20 MESES EL MONTO QUE PAGO FUE DE: ", suma);
+        for (var d = 0, _pj_a = l; d < _pj_a; d += 1) {
+            venta = Number.parseInt(input("INGRESE EL VALOR DE SU VENTA"));
+
+            if (venta > 1000) {
+                suma = venta + suma;
+            }
+
+            if (venta > 500 && venta <= 1000) {
+                suma_1 = venta + suma_1;
+            }
+
+            if (venta <= 500) {
+                suma_2 = venta + suma_2;
+            } else {
+                total = suma + suma_1 + suma_2;
+                alert("EL MONTO VENDIDO EN LA CATEGORIA 1 ES DE: $", suma);
+                alert("EL MONTO VENDIDO EN LA CATEGORIA 2 ES DE: $", suma_1);
+                alert("EL MONTO VENDIDO EN LA CATEGORIA 3 ES DE: $", suma_2);
+                alert("EL MONTO VENDIDO DE FORMA GLOBAL ES DE: $", total);
+            }
         }
     </script>
 </body>
