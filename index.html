@@ -9,42 +9,32 @@
 </head>
 
 <body>
-    <h1>Ejercio 6 guia 4</h1>
+    <h1>Ejercio 7 guia 4</h1>
     <script>
-        var suma, suma1, suma2, suma3, trab, trabj, tservi, tservi_1, tservi_2, tservi_3;
-        trabj = 10;
-        tservi = 100;
-        tservi_1 = 250;
-        tservi_2 = 400;
-        tservi_3 = 550;
-        suma = 0;
-        suma1 = 0;
-        suma2 = 0;
-        suma3 = 0;
+        var max, pi, rad, sen, sig, x, y, z;
+        sig = 1;
+        pi = 3.14;
+        max = Number.parseInt(input("DIGITE EL MAXIMO EXPONENTE"));
+        rad = Number.parseFloat(input("DIGITE EL ANGULO EN RADIANES"));
+        x = rad * (180 / pi);
+        sen = x;
 
-        for (var l = 0, _pj_a = trabj; l < _pj_a; l += 1) {
-            trab = Number.parseInt(input("  INGRESE EL TIEMPO DEDICADO A LA EMPRESA"));
+        for (var con = 3, _pj_a = max + 1; con < _pj_a; con += 2) {
+            y = 1;
+            z = 1;
 
-            if (trab >= 1 && trab <= 5) {
-                suma = trab + suma;
+            while (y <= con) {
+                z = z * y;
+                y = y + 1;
+
+                if (sig % 2 === 1) {
+                    sen = sen - Math.pow(x, con) / z;
+                } else {
+                    sen = sen + Math.pow(x, con) / z;
+                    sig += 1;
+                    console.log("EL SENO DE{:.2F}".format(x, sen));
+                }
             }
-
-            if (trab > 5 && trab <= 10) {
-                suma1 = trab + suma1;
-            }
-
-            if (trab > 10 && trab <= 20) {
-                suma2 = trab + suma2;
-            }
-
-            if (trab > 20) {
-                suma3 = trab + suma3;
-            }
-
-            alert("EL TOTAL DE LOS TRABAJADORES QUE LLEVAN ENTRE 1 Y 5 A\u00d1OS ", suma);
-            alert("EL TOTAL DE LOS TRABAJADORES QUE LLEVAN ENTRE 5 Y 10 A\u00d1OS ", suma1);
-            alert("EL TOTAL DE LOS TRABAJADORES QUE LLEVAN ENTRE 10 Y 20 A\u00d1OS ", suma2);
-            alert("EL TOTAL DE LOS TRABAJADORES QUE LLEVAN 20 A\u00d1OS EN LA EMPRESA ES DE", suma3);
         }
     </script>
 </body>
