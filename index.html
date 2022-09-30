@@ -9,33 +9,25 @@
 </head>
 
 <body>
-    <h1>Ejercio 7 guia 4</h1>
+    <h1>Ejercio 8 guia 4</h1>
     <script>
-        var max, pi, rad, sen, sig, x, y, z;
-        sig = 1;
-        pi = 3.14;
-        max = Number.parseInt(input("DIGITE EL MAXIMO EXPONENTE"));
-        rad = Number.parseFloat(input("DIGITE EL ANGULO EN RADIANES"));
-        x = rad * (180 / pi);
-        sen = x;
 
-        for (var con = 3, _pj_a = max + 1; con < _pj_a; con += 2) {
-            y = 1;
-            z = 1;
+        var divi, multi, num1, num2, res, suma;
 
-            while (y <= con) {
-                z = z * y;
-                y = y + 1;
-
-                if (sig % 2 === 1) {
-                    sen = sen - Math.pow(x, con) / z;
-                } else {
-                    sen = sen + Math.pow(x, con) / z;
-                    sig += 1;
-                    console.log("EL SENO DE{:.2F}".format(x, sen));
-                }
-            }
+        for (var x = 0, _pj_a = 10; x < _pj_a; x += 1) {
+            num1 = Number.parseInt(input("INGRESE EL PRIMER NUMERO"));
+            num2 = Number.parseInt(input("INGRESE EL SEGUDNDO NUMERO"));
+            suma = num1 + num2;
+            res = num1 - num2;
+            multi = num1 * num2;
+            divi = num1 / num2;
+            alert("EL RESULTADO DE LA SUMA ES ", suma);
+            alert("EL RESULTADO DE LA RESTA ES ", res);
+            alert("EL RESULTADO DE LA MULTIPLICACION ES ", multi);
+            alert("EL RESULTADO DE LA DIVISION ES", divi, "/n");
         }
+
+        alert("TERMIO EL PROGRAMA");
     </script>
 </body>
 
