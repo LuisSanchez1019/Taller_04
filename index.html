@@ -9,40 +9,19 @@
 </head>
 
 <body>
-    <h1>Ejercio 3 guia 4</h1>
+    <h1>Ejercio 4 guia 4</h1>
     <script>
-        var a, b, mayor, menor, prom, suma, t;
-        a = Number.parseInt(input("INGRESE EL NUMERO DE ESTUDIANTES"));
-        t = ["Estudiantes encuestados"];
+        var m, suma, total;
+        total = 10;
         suma = 0;
-        mayor = 10;
-        menor = 1;
+        m = 20;
 
-        for (var i = 0, _pj_a = a; i < _pj_a; i += 1) {
-            for (var i1, _pj_d = 0, _pj_b = t, _pj_c = _pj_b.length; _pj_d < _pj_c; _pj_d += 1) {
-                i1 = _pj_b[_pj_d];
-                b = Number.parseInt(input("INGRESE SU CALIFICACION"));
-
-                if (b > 1 && b <= 10) {
-                    suma += b;
-                }
-
-                if (b > mayor) {
-                    mayor = b;
-                } else {
-                    if (b < menor) {
-                        menor < b;
-                    }
-                }
-            }
+        for (var n = 1, _pj_a = 21; n < _pj_a; n += 1) {
+            total = total * 2;
+            alert("EN EL MES ", n, "EL VALOR QUE PAGO FUE ", total);
+            suma = total + m;
+            alert("EL TOTAL DE LOS 20 MESES EL MONTO QUE PAGO FUE DE: ", suma);
         }
-
-        prom = suma / a;
-        alert("EL PROMEDIO DE LOS ESTUDIANTES ES", prom);
-        alert(i1, a);
-        alert("LA NOTA MAS ALTA ES ", mayor);
-        alert("LA NOTA MAS BAJA ES ", menor);
-
     </script>
 </body>
 
